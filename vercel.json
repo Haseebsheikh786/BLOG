@@ -8,8 +8,24 @@
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/(.*)"
+      "src": "/(.*)",
+      "dest": "/"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/login"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/login"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/auth/login"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/auth/login"
     }
   ]
 }
