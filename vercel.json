@@ -11,21 +11,14 @@
       "src": "/(.*)",
       "dest": "/"
     },
+
     {
       "src": "/(.*)",
-      "dest": "/login"
+      "dest": "/auth"
     },
     {
       "src": "/(.*)",
-      "dest": "/login"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/auth/login"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/auth/login"
+      "dest": "/auth/(.*)"
     }
   ]
 }
