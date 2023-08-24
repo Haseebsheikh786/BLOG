@@ -19,6 +19,10 @@
       "dest": "index.js"
     },
     {
+      "src": "/auth/login",
+      "dest": "index.js"
+    },
+    {
       "src": "/blog",
       "dest": "index.js"
     },

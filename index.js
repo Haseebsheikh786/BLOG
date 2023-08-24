@@ -15,8 +15,7 @@ const { User } = require("./models/User");
 const { sanitizeUser, cookieExtractor } = require("./services/common");
 const SECRET_KEY = "SECRET_KEY";
 const cookieParser = require("cookie-parser");
-const authRouter = require("./routes/authRoutes");
-const blogRouter = require("./routes/BlogRoutes");
+ const blogRouter = require("./routes/BlogRoutes");
 const commentRouter = require("./routes/CommentRoutes");
 const morgan = require("morgan");
 
