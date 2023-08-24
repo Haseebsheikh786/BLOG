@@ -9,5 +9,62 @@
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "index.js" }]
+  "routes": [
+    {
+      "src": "/auth",
+      "dest": "index.js"
+    },
+    {
+      "src": "/auth/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/blog",
+      "dest": "index.js"
+    },
+    {
+      "src": "/blog/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/comment",
+      "dest": "index.js"
+    },
+    {
+      "src": "/comment/(.*)",
+      "dest": "index.js"
+    },
+    {
+      "src": "/",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/blog/:id",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/login",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/signup",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/submit",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/blog-update/:id",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/signOut",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "build/$1"
+    }
+  ]
 }
