@@ -12,12 +12,12 @@
       "dest": "/"
     },
     {
-      "src": "/auth",
-      "dest": "/"
+      "src": "/(.*)",
+      "dest": "/auth"
     },
     {
-      "src": "/auth/(.*)",
-      "dest": "/"
+      "src": "/(.*)",
+      "dest": "/auth/(.*)"
     }
   ]
 }
