@@ -1,5 +1,5 @@
 const Joi = require("joi");
-const Comment = require("../models/comment");
+const Comment = require("../models/Comment");
 const mongodbIdPattern = /^[0-9a-fA-F]{24}$/;
 
 const createComment = async (req, res, next) => {
