@@ -1,6 +1,6 @@
 const Joi = require("joi");
 const Blog = require("../models/Blog");
-const Comment = require("../models/comment");
+const Comment = require("../models/Comment");
 const BlogDTO = require("../dto/blog");
 const BlogDetailsDTO = require("../dto/blog-details");
 
