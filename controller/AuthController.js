@@ -25,7 +25,7 @@ exports.createUser = async (req, res) => {
             const token = jwt.sign(sanitizeUser(doc), SECRET_KEY);
             res
               .cookie("jwt", token, {
-                expires: new Date(Date.now() + 3600000),
+                expires: new Date(Date.now() + 900000),
                 httpOnly: true,
               })
               .status(201)
@@ -42,7 +42,7 @@ exports.createUser = async (req, res) => {
 exports.loginUser = async (req, res) => {
   res
     .cookie("jwt", req.user.token, {
-      expires: new Date(Date.now() + 3600000),
+      expires: new Date(Date.now() + 900000),
       httpOnly: true,
     })
     .status(201)
