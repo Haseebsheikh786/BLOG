@@ -1,7 +1,6 @@
 const express = require("express");
 const dbConnect = require("./database/index");
 const { PORT } = require("./config/index");
-const router = require("./routes/index");
 const cors = require("cors");
 const session = require("express-session");
 const passport = require("passport");
