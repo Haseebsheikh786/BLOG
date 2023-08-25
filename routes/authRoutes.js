@@ -12,13 +12,9 @@ const { isAuth } = require("../services/common");
 const router = express.Router();
 
 router.route("/signup").post(createUser);
-
-router.route("/login", passport.authenticate("local")).post(loginUser);
-
+router.post("/login", passport.authenticate("local"), loginUser);
 router.route("/logout").get(logout);
-
-router.route("/check", isAuth()).get(checkAuth);
-
-router.route("/user ", isAuth()).get(fetchUserById);
+router.get("/check", isAuth(), checkAuth);
+router.get("/user", isAuth(), fetchUserById);
 
 module.exports = router;

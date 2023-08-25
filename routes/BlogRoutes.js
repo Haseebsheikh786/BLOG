@@ -9,7 +9,6 @@ const {
 
 const { isAuth } = require("../services/common");
 
-
 const router = express.Router();
 //  /auth is already added in base path
 router
@@ -19,4 +18,4 @@ router
   .put("/", isAuth(), updateBlog)
   .delete("/:id", isAuth(), deleteBlog);
 
-exports.router = router;
+exports.router = router; 

@@ -3,6 +3,7 @@ const crypto = require("crypto");
 const { sanitizeUser } = require("../services/common");
 const SECRET_KEY = "SECRET_KEY";
 const jwt = require("jsonwebtoken");
+const { log } = require("console");
 
 exports.createUser = async (req, res) => {
   try {
@@ -46,6 +47,7 @@ exports.loginUser = async (req, res) => {
     })
     .status(201)
     .json(req.user.token);
+  console.log(req.user.token);
 };
 
 exports.logout = async (req, res) => {

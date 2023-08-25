@@ -18,23 +18,23 @@ const cookieParser = require("cookie-parser");
  const blogRouter = require("./routes/BlogRoutes");
 const commentRouter = require("./routes/CommentRoutes");
 const morgan = require("morgan");
-
+ 
 const path = require("path");
-
+  
 // JWT options
-const opts = {};
+const opts = {}; 
 opts.jwtFromRequest = cookieExtractor;
 opts.secretOrKey = SECRET_KEY; // TODO: should not be in code;
-
+ 
 app.use(morgan("default"));
 
-app.use(express.static(path.resolve(__dirname, "build")));
+app.use(express.static(path.resolve(__dirname, "build")));  
 app.use(cookieParser());
-
+ 
 app.use(
   session({
-    secret: "keyboard cat",
-    resave: false, // don't save session if unmodified
+    secret: "keyboard cat", 
+    resave: false, // don't save session if unmodified  
     saveUninitialized: false, // don't create session until something stored
   })
 );
